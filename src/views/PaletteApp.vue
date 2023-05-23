@@ -1,5 +1,5 @@
 <template>
-  <h1>Vue パレット</h1>
+  <h1>Vue パレット!</h1>
   <div class="app">
     <div class="palette" style="background-color: rgba(0, 0, 200, 0.5)"></div>
     <p>rgba( {{ 0 }}, {{ 0 }}, 200, 0.5 )</p>
