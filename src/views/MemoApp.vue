@@ -1,5 +1,5 @@
 <template>
-  <h1>Vue メモ</h1>
+  <h1>-- Vue メモ --</h1>
   <div class="memo-list">
     <ul class="memo-list__container">
       <li class="memo">
