@@ -2,7 +2,7 @@
   <footer class="footer">
     <div>
       This Application is made by
-      <span class="names">○○○, ○○○ and ○○○ みなしょー</span>.
+      <span class="names">各務健介, 恵藤晃吉 and 中諒太郎</span>.
     </div>
     <small
       >The Application is created as a part of the GeekSalon WebExpert
