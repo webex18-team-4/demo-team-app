@@ -2,37 +2,42 @@
   <h1>-- Vue メモ --</h1>
   <div class="memo-list">
     <ul class="memo-list__container">
-      <li class="memo">
+      <li class="memo" v-for="(memo, index) in memolist" v-bind:key="index">
         <div class="memo__checkbox">
-          <input type="checkbox" />
+          <input type="checkbox" id="index" v-model="checked" />
         </div>
-        <div class="memo__text">ひき肉を300g買う</div>
-        <button class="memo__delete">削除</button>
-      </li>
-      <li class="memo">
-        <div class="memo__checkbox">
-          <input type="checkbox" />
-        </div>
-        <div class="memo__text">ホウレンソウを1束買う</div>
-        <button class="memo__delete">削除</button>
-      </li>
-      <li class="memo">
-        <div class="memo__checkbox">
-          <input type="checkbox" />
-        </div>
-        <div class="memo__text">ピーマンを2個買う</div>
-        <button class="memo__delete">削除</button>
+        <div>{{ memo }}</div>
+        <button class="memo__delete" v-on:click="deletebutton(index)">
+          削除
+        </button>
       </li>
     </ul>
     <div class="add-memo-field">
-      <input class="add-memo-field__input" type="text" />
-      <button class="add-memo-field__button">追加</button>
+      <input class="add-memo-field__input" type="text" v-model="memotinput" />
+      <div>{{ memotinput }}</div>
+      <button class="add-memo-field__button" v-on:click="tuika">追加</button>
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      memolist: [],
+      memotinput: "",
+    }
+  },
+  methods: {
+    tuika() {
+      this.memolist.push(this.memotinput)
+      this.memotinput = ""
+    },
+    deletebutton: function (index) {
+      this.memolist.splice(index, 1)
+    },
+  },
+}
 </script>
 
 <style scoped>
