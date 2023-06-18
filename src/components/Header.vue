@@ -28,8 +28,16 @@
         to="/memo"
         class="navigation__link"
         exact-active-class="navigation__link--exact-active"
-        >Vue メモ</router-link
       >
+        Vue メモ
+      </router-link>
+      <router-link
+        to="/testlist"
+        class="navigation__link"
+        exact-active-class="navigation__link--exact-active"
+      >
+        なんかtest
+      </router-link>
     </nav>
   </header>
 </template>

@@ -20,7 +20,7 @@
     </div>
     <div>{{ kotae }}</div>
   </div>
-  <div v-on:click="getChatgptAPI">次の問題</div>
+  <div v-on:click="getChatgptAPI" class="mondai">次の問題</div>
 </template>
 
 <script>
